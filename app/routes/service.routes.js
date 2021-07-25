@@ -14,6 +14,8 @@ module.exports = function(app) {
 
   app.get("/api/service/all/:id", controller.ServicesById);
 
+  app.get("/api/service/user/:id", controller.ServicesByUser);
+
   
 
   app.post("/api/service/all" , controller.CreateService);
