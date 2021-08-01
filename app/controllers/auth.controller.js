@@ -102,8 +102,13 @@ exports.signin = (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
-        roles: authorities,
-        accessToken: token
+        rols: authorities,
+        accessToken: token,
+        zipcode : user.zipcode,
+        facebook : user.facebook,
+        mobile : user.mobile,
+        skype : user.skype
+        
       });
     });
 };
