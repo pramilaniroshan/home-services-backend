@@ -18,3 +18,11 @@ exports.allAccess = (req, res) => {
   exports.moderatorBoard = (req, res) => {
     res.status(200).send("Moderator Content.");
   };
+
+  exports.UpdateProfile =(req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body)
+      .then(User => res.json({ msg: 'Updated successfully' }))
+      .catch(err =>
+        res.status(400).json({ error: 'Unable to update the Database' })
+      );
+  }
