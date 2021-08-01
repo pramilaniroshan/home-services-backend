@@ -26,8 +26,17 @@ const ServiceSchema = new mongoose.Schema({
   },
   image:{
    type: String
-  }
-  
+  },
+  place : [],
+  zipcode : {
+    type : Number, 
+    required: true
+  },
+  service_provider : String,
+  budget : Number,
+  mobile : Number,
+  facebook : String,
+  Skype : String
 });
 
 module.exports = Service = mongoose.model('Service', ServiceSchema);
