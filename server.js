@@ -2,36 +2,24 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
-
 const db = require("./app/models");
-
 const app = express();
 
-// routes
-
-
-
-
-
-var corsOptions = {
+corsOptions = {
   origin: "http://localhost:8081"
 };
 
 app.use(cors(corsOptions));
-
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
-
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Smart servoce application." });
+  res.json({ message: "Welcome to Smart service application." });
 });
 
 // set port, listen for requests
-
 const Role = db.role;
 
 db.mongoose
