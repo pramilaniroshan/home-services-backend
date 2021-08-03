@@ -43,16 +43,7 @@ exports.allServices = (req, res) => {
     Service.findByIdAndUpdate(req.params.id, req.body)
       .then(Service => 
          res.status(200).send({
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        rols: authorities,
-        accessToken: token,
-        zipcode : user.zipcode,
-        facebook : user.facebook,
-        mobile : user.mobile,
-        skype : user.skype
-        
+          msg: 'Done'
       }))
       .catch(err =>
         res.status(400).json({ error: 'Unable to update the Database' })

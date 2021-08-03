@@ -26,5 +26,6 @@ module.exports = function(app) {
     controller.adminBoard
   );
 
-  app.put("/api/test/user/:id", controller.UpdateProfile);
+  app.put("/api/test/user/:id" , controller.UpdateProfile);
 };
+// ,[authJwt.verifyToken]

@@ -20,8 +20,9 @@ module.exports = function(app) {
 
   app.post("/api/service/all" , controller.CreateService);
 
-  app.delete("/api/service/all/:id",[authJwt.verifyToken], controller.DeleteById);
+  app.delete("/api/service/all/:id", controller.DeleteById);
 
-  app.put("/api/service/all/:id", [authJwt.verifyToken] ,controller.UpdateId); 
+  app.put("/api/service/all/:id" ,controller.UpdateId); 
 
+  // [authJwt.verifyToken]
 }

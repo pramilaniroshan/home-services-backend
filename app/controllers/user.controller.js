@@ -26,3 +26,11 @@ exports.allAccess = (req, res) => {
         res.status(400).json({ error: 'Unable to update the Database' })
       );
   }
+
+  exports.DeleteUser =(req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body)
+      .then(User => res.json({ msg: 'Updated successfully' }))
+      .catch(err =>
+        res.status(400).json({ error: 'Unable to update the Database' })
+      );
+  }
